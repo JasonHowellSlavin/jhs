@@ -1,0 +1,18 @@
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/index" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/placeholders.json" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/.helix/headers.json" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/docs/library/library.json" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/metadata.json" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/fragments/gnav" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/fragments/footer" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/fragments/demo" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/fragments/404" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/index" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/placeholders.json" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/.helix/headers.json" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/docs/library/library.json" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/metadata.json" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/gnav" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/footer" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/demo" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/404"
