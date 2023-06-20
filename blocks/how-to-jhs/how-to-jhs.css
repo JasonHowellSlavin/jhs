@@ -1,0 +1,44 @@
+.how-to-jhs {
+  max-width: 700px;
+  padding: 80px 24px;
+  margin: 0 auto;
+}
+
+.how-to-jhs .heading-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #cecece;
+}
+
+.how-to-jhs .heading-container div {
+  width: 50%;
+  padding: 10px;
+}
+
+.how-to-jhs .list-container ul,
+.how-to-jhs .list-container ol {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.how-to-jhs .list-container ul li::marker,
+.how-to-jhs .list-container ol li::marker {
+  font-size: 24px;
+}
+
+.how-to-jhs .list-container li {
+  padding: 32px;
+  margin-left: 28px;
+}
+
+.how-to-jhs .list-container li::after {
+  display: flex;
+  position: relative;
+  content: '';
+  border-bottom: 1px solid #cecece;
+  width: 700px;
+  top: 32px;
+  left: -60px;
+}
