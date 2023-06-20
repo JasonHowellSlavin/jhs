@@ -16,3 +16,10 @@ curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/g
 curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/footer" &&
 curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/demo" &&
 curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/fragments/404"
+
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/blog/malamute" &&
+curl -X POST "https://admin.hlx.page/preview/jasonhowellslavin/jhs/main/blog/bernese" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/blog/malamute" &&
+curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/blog/bernese"
+
+curl -vX POST "https://admin.hlx.page/sitemap/jasonhowellslavin/jhs/main/blog/sitemap.xml"
