@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "Website foundation technology.",
+  "type": "module",
   "scripts": {
     "test": "wtr \"./test/**/*.test.js\" --node-resolve --port=2000 --coverage",
     "test:watch": "npm test -- --watch",
