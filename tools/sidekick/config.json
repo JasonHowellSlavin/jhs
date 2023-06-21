@@ -21,6 +21,16 @@
     },
     {
       "containerId": "tools",
+      "title": "Show Blocks",
+      "id": "showblocks",
+      "environments": [
+        "dev",
+        "preview"
+      ],
+      "event": "showblocks"
+    },
+    {
+      "containerId": "tools",
       "id": "localize",
       "title": "Localize",
       "environments": [

@@ -23,3 +23,9 @@ curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/blog/malamu
 curl -X POST "https://admin.hlx.page/live/jasonhowellslavin/jhs/main/blog/bernese"
 
 curl -vX POST "https://admin.hlx.page/sitemap/jasonhowellslavin/jhs/main/blog/sitemap.xml"
+
+
+curl -d '{"data":{"firstName":"test"}}' -X POST "https://admin.hlx.page/form/hlxsites/jasonhowellslavin/jhs/main/email-form.json"
+
+curl -d '{"data":{"firstName":"test"}}' -H "Content-Type: application/json" -X POST "https://admin.hlx.page/form/hlxsites/jasonhowellslavin/jhs/main/email-form.json"
+
