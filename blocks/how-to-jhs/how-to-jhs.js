@@ -18,7 +18,7 @@ export default async function init(el) {
     const response = await fetch(url, {
       method: 'POST',
       mode: "no-cors", // no-cors, *cors, same-origin
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
+      data: JSON.stringify(data), // body data type must match "Content-Type" header
     });
     return response;
   });
