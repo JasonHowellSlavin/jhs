@@ -52,10 +52,12 @@ export function encodeList(list) {
   })
 }
 
-const Christmas = () => {
+const Christmas = ({src}) => {
   const namesUrl = 'https://main--jhs--jasonhowellslavin.hlx.page/christmas/names.json';
   const [name, setName]  = useState();
   const [reciever, setReciever] = useState('');
+
+  console.log('src', src)
 
   useEffect(async () => {
     if (localStorage.getItem('encodedNames')) return;
@@ -84,26 +86,49 @@ const Christmas = () => {
     })
     const reciever = atob(giverPair.reciever);
 
-    setReciever(reciever)
+    setReciever(reciever.charAt(0).toUpperCase() + reciever.slice(1))
+  }
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSubmit();
+    }
   }
 
   return html`
+  <article style=${{backgroundImage: `url(${src})`}}>
     <h1>Secret Santa!</h1>
     <section>
       <p>Type in your name below, and reveal who you picked!</p>
-      <label for='name'>Name:</label>
-      <input type='text' vale=${name} onInput=${handleInput}></input>
-      <button onClick=${() => {handleSubmit()}} >submit</button>
+      <div class='area'>
+        <label for='name'>Name:</label>
+        <input type='text' vale=${name} onInput=${handleInput} onKeyDown=${handleKeyDown}></input>
+        <button onClick=${() => {handleSubmit()}} >submit</button>
+      </div>
+      <div>
+        ${reciever !== '' && html`<p>You are ${reciever}'s secret Santa!</p>`}
+      </div>
     </section>
-    <section>
-      ${reciever !== '' && html`<p>You are ${reciever}'s secret Santa!</p>`}
-    </section>
+  </article>
     `;
 }
 
 export default async function init(el) {
-    const app = html` <${Christmas} rootEl=${el} /> `;
+  const pictures = el.querySelectorAll('picture');
+  const card = pictures[0];
+  const bg = pictures[1];
+
+  const main = document.querySelector('main');
+  const bgSrc = bg.querySelector('img').getAttribute('src');
+  // main.style.backgroundImage = `url(${bgSrc})`;
+  const section = document.querySelector('.section');
+  section.prepend(card);
+  const src = card.querySelector('img').getAttribute('src');
+  card.classList.add('card');
+  bg.remove();
+  card.remove()
+
+  const app = html` <${Christmas} rootEl=${el} src=${src} /> `;
   
-    render(app, el);
+  render(app, el);
 };
