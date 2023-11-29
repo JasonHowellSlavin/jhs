@@ -120,7 +120,7 @@ export default async function init(el) {
 
   const main = document.querySelector('main');
   const bgSrc = bg.querySelector('img').getAttribute('src');
-  // main.style.backgroundImage = `url(${bgSrc})`;
+  main.style.backgroundImage = `url(${bgSrc})`;
   const section = document.querySelector('.section');
   section.prepend(card);
   const src = card.querySelector('img').getAttribute('src');
