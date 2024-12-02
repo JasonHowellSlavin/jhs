@@ -52,6 +52,17 @@ export function encodeList(list) {
   })
 }
 
+export function dateIsExpired(storedDate) {
+  const {year, month} = JSON.parse(storedDate);
+  const now = new Date(Date.now());
+  const currMonth = now.getMonth();
+  const currYear = now.getYear();
+  
+  if (currYear > year) return false;
+  if (currMonth > (month + 3)) return false;
+  return true;
+}
+
 const Christmas = ({src}) => {
   const namesUrl = 'https://main--jhs--jasonhowellslavin.hlx.page/christmas/names.json';
   const [name, setName]  = useState();
@@ -60,8 +71,6 @@ const Christmas = ({src}) => {
   console.log('src', src)
 
   useEffect(async () => {
-    if (localStorage.getItem('encodedNames')) return;
-
     const resp = await fetch(namesUrl);
     const json = await resp.json();
     const data = json.data;
